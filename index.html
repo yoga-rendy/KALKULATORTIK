@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subnet Universe — TKJ Futuristik</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="logo">Subnet<span class="accent">Universe</span></div>
+    <div class="nav-links">
+      <a href="#home">Beranda</a>
+      <a href="#calc">Kalkulator</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#mentor">Mentor</a>
+    </div>
+    <button id="themeBtn" class="theme-btn">🌙 Dark Mode</button>
+  </nav>
+
+  <!-- HOME SECTION -->
+  <section id="home" class="section">
+    <h1>Selamat datang di <span>Subnet Universe</span></h1>
+    <p>Platform interaktif untuk anak TKJ belajar jaringan secara visual dan praktis.</p>
+    <button class="cta-btn" onclick="document.getElementById('calc').scrollIntoView({ behavior:'smooth' })">Mulai Hitung</button>
+  </section>
+
+  <!-- CALCULATOR SECTION -->
+  <section id="calc" class="section">
+    <h1>Kalkulator <span>Subnetting</span></h1>
+    <div class="calc-container">
+      <input type="text" id="ipInput" placeholder="Masukkan IP (contoh: 192.168.1.10)">
+      <input type="number" id="maskInput" placeholder="Subnet mask (contoh: 24)" min="0" max="32">
+      <button id="calcBtn">Hitung</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+    <div id="calcResult"></div>
+
+    <div id="stepByStepContainer" class="result-box" style="display:none;">
+      <h3>Langkah-Langkah Perhitungan</h3>
+      <ol id="stepsList"></ol>
+    </div>
+  </section>
+
+  <!-- QUIZ SECTION -->
+  <section id="quiz" class="section">
+    <h1>Quiz <span>Interaktif</span></h1>
+
+    <div class="level-selector">
+      <label for="quizLevelSelect">Pilih Level: </label>
+      <select id="quizLevelSelect">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <button id="startQuizBtn">Mulai Quiz</button>
+    </div>
+
+    <div id="quizContainer" class="quiz-box">
+      <!-- Konten kuis akan dirender oleh script.js -->
+    </div>
+
+    <button id="nextQuizBtn" style="display:none;">Pertanyaan Selanjutnya</button>
+
+    <div id="quizStats" class="result-box" style="margin-top:20px;"></div>
+  </section>
+
+  <!-- AI MENTOR SECTION -->
+  <section id="mentor" class="section">
+    <h1>AI <span>Mentor</span></h1>
+    <div id="mentorResponse" class="mentor-bubble">Hai! Aku mentor jaringanmu. Tanya apa aja seputar subnet, IP, atau mask!</div>
+    <div class="mentor-input">
+      <input type="text" id="mentorInput" placeholder="Tulis pertanyaanmu...">
+      <button id="mentorSendBtn">Kirim</button>
+    </div>
+  </section>
+
+  <footer>© 2025 Subnet Universe — Dibuat untuk latihan AI & pemrograman dasar.</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
